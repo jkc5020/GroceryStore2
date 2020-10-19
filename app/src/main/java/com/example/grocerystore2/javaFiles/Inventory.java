@@ -24,6 +24,7 @@ public class Inventory {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.out.println("file not found");
         }
 
     }
