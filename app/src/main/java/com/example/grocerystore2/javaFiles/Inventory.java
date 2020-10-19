@@ -6,7 +6,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Inventory {
-    HashMap<Integer, Food> myInventory;
+
+    private HashMap<Integer, Food> myInventory;
+
     public Inventory(){
         this.myInventory = new HashMap<>(myInventory);
 
@@ -22,7 +24,7 @@ public class Inventory {
 
     private void readFile() throws FileNotFoundException {
         try {
-            File myFile = new File("Fooditems.txt");
+            File myFile = new File("..\\..\\..\\sampledata\\FoodItems.txt");
             Scanner myScanner = new Scanner(myFile);
             while(myScanner.hasNextLine()){
                 String[] myLine = myScanner.nextLine().split(",");
