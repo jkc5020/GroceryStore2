@@ -6,10 +6,18 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Inventory {
-    HashMap<Double, Food> myInventory;
+    HashMap<Integer, Food> myInventory;
     public Inventory(){
         this.myInventory = new HashMap<>(myInventory);
 
+    }
+
+    public String getName(int id){
+        return myInventory.get(id).getName();
+    }
+
+    public double getPrice(int id){
+        return myInventory.get(id).getPrice();
     }
 
     private void readFile() throws FileNotFoundException {
@@ -18,7 +26,7 @@ public class Inventory {
             Scanner myScanner = new Scanner(myFile);
             while(myScanner.hasNextLine()){
                 String[] myLine = myScanner.nextLine().split(",");
-                myInventory.put(Double.parseDouble(myLine[2]), new Food(myLine[0], Double.parseDouble(myLine[1]), Integer.parseInt(myLine[2])));
+                myInventory.put(Integer.parseInt(myLine[2]), new Food(myLine[0], Double.parseDouble(myLine[1]), Integer.parseInt(myLine[2])));
 
 
             }
@@ -27,5 +35,7 @@ public class Inventory {
             System.out.println("file not found");
         }
 
+
     }
+
 }
