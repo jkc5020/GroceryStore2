@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * The inventory class stores all the food objects as a hashmap that is read in from a txt file
+ */
 public class Inventory {
 
     private HashMap<Integer, Food> myInventory;
