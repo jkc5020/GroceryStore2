@@ -1,8 +1,10 @@
-package com.example.grocerystore2;
+package com.example.grocerystore2.userInterface;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.grocerystore2.R;
 
 public class MainActivity extends AppCompatActivity {
     //hello there
